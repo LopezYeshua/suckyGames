@@ -1,7 +1,15 @@
 :root {
     --hero-height: 600px;
+    --size-200: 16px;
 }
-
+/* Start of header css */
+.sg-games-header {
+    width: 100%;
+    display: block;
+    position: sticky;
+    top: 0;
+    box-sizing: border-box;
+}
 .header {
     background: rgba(162, 0, 0, 0.44);
     border-radius: .5rem;
@@ -9,11 +17,12 @@
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    top: var(--size-200);
+    left: var(--size-200);
+    right: var(--size-200);
 
-    margin: 1em .5em;
     padding: 1em;
     min-height: 30px;
-    max-width: calc(100vw - 3em);
 }
 /* Start of hero CSS */
 .hero {
@@ -39,11 +48,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: var(--hero-height);
+    height: 520px;
     width: 30vw;
-
-    padding-top: calc(4em + 30px);
-    padding-left: 5vw;
+    padding: calc(4em + 30px) 0 0 5vw;
 }
 
 .hero-info h1 {
