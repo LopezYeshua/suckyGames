@@ -6,3 +6,7 @@ This react app is created without using the create-react-app command to better u
 
 # Preview
 ![alt text](./RMAssets/day1.PNG "Recent Progress since 10/13/2022")
+
+# How to Use
+To install this project, do the following after cloning:
+1. "npm install" in the project directory in the command line.
