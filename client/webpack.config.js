@@ -16,14 +16,22 @@ module.exports = {
         liveReload: true
     },
     resolve: {
-        extensions: [".js", ".jsx", ".json", "./ts"],
+        extensions: [".jsx", ".js", ".json", "./ts"],
     },
     module: {
         rules: [
             {
-            test: /\.(js|jsx)$/,
-            exclude: /node_modulus/,
-            use: "babel-loader"
+                test: /\.css$/,
+                use: ["style-loader", "css-loader"]
+            },
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /node_modulus/,
+                use: "babel-loader"
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource'
             }
         ]
     }

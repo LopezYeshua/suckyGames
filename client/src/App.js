@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Dashboard from './views/Dashboard'
+import "./App.css"
 
 const App = () => {
 
