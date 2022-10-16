@@ -4,19 +4,28 @@ import Hero from '../components/Hero'
 import CategoryTabs from '../components/CategoryTabs'
 
 const Dashboard = () => {
+    const categories = ['Horror', 'Action', 'Survival', 'Puzzle', 'FPS', 'RPG', 'Casual', 'Strategy']
     
     const hero = {
-        marginTop: "620px",
+        display: "flex",
+        flexDirection: "column",
     }
 
     return (
-        <>
-            <div style={hero}>
-                <Hero />
-                <Header />
+        
+        <div className="main">
+            <Header />
+            <Hero />
+            <div className="category-tabs">
+                {categories.map((category, index) => {
+                    return (
+                        <div key={index} className="category-item">
+                            <CategoryTabs category={category} />
+                        </div>
+                    )
+                })}
             </div>
-            <CategoryTabs />
-        </>
+        </div>
     )
 }
 export default Dashboard

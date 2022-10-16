@@ -1,41 +1,56 @@
 :root {
     --hero-height: 600px;
+    --max-width: 2600px;
     --size-200: 16px;
 }
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /* Start of header css */
+
 .sg-games-header {
     width: 100%;
+    max-width: var(--max-width);
+    position: fixed;
     display: block;
-    position: sticky;
     top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
     box-sizing: border-box;
 }
+
 .header {
     background: rgba(162, 0, 0, 0.44);
     border-radius: .5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position: absolute;
     top: var(--size-200);
     left: var(--size-200);
     right: var(--size-200);
-
     padding: 1em;
     min-height: 30px;
+    box-sizing: border-box;
 }
-/* Start of hero CSS */
+/* End of header css */
+
+/* Start of hero css */
+
 .hero {
-    position: absolute;
-    max-width: 100vw;
-    max-height: 400px;
-    left: 0;
-    top: 0;
+    position: relative;
+    display: block;
+    width: 100%;
+    transform: translate(-50%);
+    left: 50%;
 }
 
 .hero-image {
-    min-width: 95vw;
-    margin-left: 5vw;
+    
     height: var(--hero-height);
     background: url('../images/mw2.jpg');
     background-repeat: no-repeat;
@@ -45,10 +60,7 @@
 
 .hero-info {
     background: linear-gradient(70.55deg, #180000 46.24%, rgba(24, 0, 0, 0) 75.46%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 520px;
+    height: calc(600px - 4em - 30px);
     width: 30vw;
     padding: calc(4em + 30px) 0 0 5vw;
 }
@@ -67,3 +79,12 @@
 }
 
 /* End of hero css */
+
+.category-tabs {
+    display: grid;
+    grid-template
+}
+
+.category-item {
+    display: inline-grid;
+}
