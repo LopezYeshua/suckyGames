@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <div className="sg-games-header">
             <nav className="header">
-                <h1>Sucky Games</h1>
+                <h1>SuckyGames</h1>
                 <h3>Login/Register</h3>
             </nav>
         </div>

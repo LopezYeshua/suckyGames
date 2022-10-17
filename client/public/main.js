@@ -30,6 +30,16 @@ eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/***/ ((module) => {
+
+eval("\n\nmodule.exports = function (url, options) {\n  if (!options) {\n    options = {};\n  }\n  if (!url) {\n    return url;\n  }\n  url = String(url.__esModule ? url.default : url); // If url is already wrapped in quotes, remove them\n\n  if (/^['\"].*['\"]$/.test(url)) {\n    url = url.slice(1, -1);\n  }\n  if (options.hash) {\n    url += options.hash;\n  } // Should url be wrapped?\n  // See https://drafts.csswg.org/css-values-3/#urls\n\n  if (/[\"'() \\t\\n]|(%20)/.test(url) || options.needQuotes) {\n    return \"\\\"\".concat(url.replace(/\"/g, '\\\\\"').replace(/\\n/g, \"\\\\n\"), \"\\\"\");\n  }\n  return url;\n};\n\n//# sourceURL=webpack://suckygames/./node_modules/css-loader/dist/runtime/getUrl.js?");
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/runtime/noSourceMaps.js":
 /*!**************************************************************!*\
   !*** ./node_modules/css-loader/dist/runtime/noSourceMaps.js ***!
@@ -140,13 +150,43 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/components/CategoryTabs.jsx":
+/*!*****************************************!*\
+  !*** ./src/components/CategoryTabs.jsx ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar CategoryTabs = function CategoryTabs(_ref) {\n  var category = _ref.category;\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"button\", {\n    className: \"category-btn\"\n  }, category));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CategoryTabs);\n\n//# sourceURL=webpack://suckygames/./src/components/CategoryTabs.jsx?");
+
+/***/ }),
+
+/***/ "./src/components/Footer.jsx":
+/*!***********************************!*\
+  !*** ./src/components/Footer.jsx ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar Footer = function Footer() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"footer\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"a\", {\n    href: \"#\"\n  }, \"Portfolio\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"a\", {\n    href: \"https://www.linkedin.com/in/yeshua-lopez-232306184/\",\n    target: \"blank\"\n  }, \"LinkedIn\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"a\", {\n    href: \"https://github.com/LopezYeshua\"\n  }, \"Github\"));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);\n\n//# sourceURL=webpack://suckygames/./src/components/Footer.jsx?");
+
+/***/ }),
+
+/***/ "./src/components/GamesGrid.jsx":
+/*!**************************************!*\
+  !*** ./src/components/GamesGrid.jsx ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar GamesGrid = function GamesGrid(_ref) {\n  var gameList = _ref.gameList,\n    images = _ref.images;\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"game-grid\"\n  }, gameList.map(function (game, index) {\n    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n      key: index,\n      className: \"game-item\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"img\", {\n      src: images[game.title],\n      alt: \"game\"\n    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n      className: \"game-info\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h3\", null, game.title.replace(/([a-z])([A-Z, 0-9])/g, \"$1 $2\")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h4\", null, game.price === 0 ? \"Free\" : \"$\".concat(game.price)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"button\", null, \"Add to Cart\")));\n  }));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (GamesGrid);\n\n//# sourceURL=webpack://suckygames/./src/components/GamesGrid.jsx?");
+
+/***/ }),
+
 /***/ "./src/components/Header.jsx":
 /*!***********************************!*\
   !*** ./src/components/Header.jsx ***!
   \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _static_css_dashboard_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../static/css/dashboard.css */ \"./src/static/css/dashboard.css\");\n\n\nvar Header = function Header() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"header\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h1\", null, \"Sucky Games\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h3\", null, \"Login/Register\")));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Header);\n\n//# sourceURL=webpack://suckygames/./src/components/Header.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _static_css_dashboard_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../static/css/dashboard.css */ \"./src/static/css/dashboard.css\");\n\n\nvar Header = function Header() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"sg-games-header\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"nav\", {\n    className: \"header\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h1\", null, \"SuckyGames\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h3\", null, \"Login/Register\")));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Header);\n\n//# sourceURL=webpack://suckygames/./src/components/Header.jsx?");
 
 /***/ }),
 
@@ -156,7 +196,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _static_css_dashboard_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../static/css/dashboard.css */ \"./src/static/css/dashboard.css\");\n/* harmony import */ var _static_images_mw2_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../static/images/mw2.jpg */ \"./src/static/images/mw2.jpg\");\n\n\n\nvar Hero = function Hero() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"hero\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"img\", {\n    src: \"../static/images/mw2.jpg\",\n    alt: \"mw2\"\n  }));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Hero);\n\n//# sourceURL=webpack://suckygames/./src/components/Hero.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar Hero = function Hero(_ref) {\n  var gameTitle = _ref.gameTitle,\n    price = _ref.price,\n    btnAction = _ref.btnAction;\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"hero\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"hero-image\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"hero-info\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h1\", null, gameTitle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h3\", null, price), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"button\", null, btnAction))));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Hero);\n\n//# sourceURL=webpack://suckygames/./src/components/Hero.jsx?");
+
+/***/ }),
+
+/***/ "./src/data/games.js":
+/*!***************************!*\
+  !*** ./src/data/games.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar games = [{\n  id: 1,\n  title: \"Overwatch2\",\n  price: 0\n}, {\n  id: 2,\n  title: \"Fortnite\",\n  price: 0\n}, {\n  id: 3,\n  title: \"ModernWarfareII\",\n  price: 70\n}, {\n  id: 4,\n  title: \"Minecraft\",\n  price: 20\n}, {\n  id: 5,\n  title: \"ResidentEvil8\",\n  price: 40\n}, {\n  id: 6,\n  title: \"TheCallistoProtocol\",\n  price: 70\n}, {\n  id: 7,\n  title: \"DeadSpace\",\n  price: 70\n}, {\n  id: 8,\n  title: \"HotWheels\",\n  price: 50\n}, {\n  id: 9,\n  title: \"FlightSimulator\",\n  price: 60\n}];\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (games);\n\n//# sourceURL=webpack://suckygames/./src/data/games.js?");
 
 /***/ }),
 
@@ -170,13 +220,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 
 /***/ }),
 
+/***/ "./src/static/images/index.js":
+/*!************************************!*\
+  !*** ./src/static/images/index.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _Fortnite_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Fortnite.jpg */ \"./src/static/images/Fortnite.jpg\");\n/* harmony import */ var _Minecraft_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Minecraft.jpg */ \"./src/static/images/Minecraft.jpg\");\n/* harmony import */ var _ModernWarfareII_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ModernWarfareII.jpg */ \"./src/static/images/ModernWarfareII.jpg\");\n/* harmony import */ var _Overwatch2_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Overwatch2.jpg */ \"./src/static/images/Overwatch2.jpg\");\n/* harmony import */ var _ResidentEvil8_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ResidentEvil8.jpg */ \"./src/static/images/ResidentEvil8.jpg\");\n/* harmony import */ var _CallistoProtocol_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./CallistoProtocol.jpg */ \"./src/static/images/CallistoProtocol.jpg\");\n/* harmony import */ var _DeadSpace_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./DeadSpace.jpg */ \"./src/static/images/DeadSpace.jpg\");\n/* harmony import */ var _HotWheels_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./HotWheels.jpg */ \"./src/static/images/HotWheels.jpg\");\n/* harmony import */ var _FlightSimulator_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./FlightSimulator.jpg */ \"./src/static/images/FlightSimulator.jpg\");\n\n\n\n\n\n\n\n\n\nvar images = {\n  Fortnite: _Fortnite_jpg__WEBPACK_IMPORTED_MODULE_0__,\n  Minecraft: _Minecraft_jpg__WEBPACK_IMPORTED_MODULE_1__,\n  ModernWarfareII: _ModernWarfareII_jpg__WEBPACK_IMPORTED_MODULE_2__,\n  Overwatch2: _Overwatch2_jpg__WEBPACK_IMPORTED_MODULE_3__,\n  ResidentEvil8: _ResidentEvil8_jpg__WEBPACK_IMPORTED_MODULE_4__,\n  TheCallistoProtocol: _CallistoProtocol_jpg__WEBPACK_IMPORTED_MODULE_5__,\n  DeadSpace: _DeadSpace_jpg__WEBPACK_IMPORTED_MODULE_6__,\n  HotWheels: _HotWheels_jpg__WEBPACK_IMPORTED_MODULE_7__,\n  FlightSimulator: _FlightSimulator_jpg__WEBPACK_IMPORTED_MODULE_8__\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (images);\n\n//# sourceURL=webpack://suckygames/./src/static/images/index.js?");
+
+/***/ }),
+
 /***/ "./src/views/Dashboard.jsx":
 /*!*********************************!*\
   !*** ./src/views/Dashboard.jsx ***!
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Header */ \"./src/components/Header.jsx\");\n/* harmony import */ var _components_Hero__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Hero */ \"./src/components/Hero.jsx\");\n\n\n\nvar Dashboard = function Dashboard() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Hero__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Header__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Dashboard);\n\n//# sourceURL=webpack://suckygames/./src/views/Dashboard.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Header */ \"./src/components/Header.jsx\");\n/* harmony import */ var _components_Hero__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Hero */ \"./src/components/Hero.jsx\");\n/* harmony import */ var _components_CategoryTabs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/CategoryTabs */ \"./src/components/CategoryTabs.jsx\");\n/* harmony import */ var _components_GamesGrid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/GamesGrid */ \"./src/components/GamesGrid.jsx\");\n/* harmony import */ var _data_games__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../data/games */ \"./src/data/games.js\");\n/* harmony import */ var _static_images_index__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../static/images/index */ \"./src/static/images/index.js\");\n/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Footer */ \"./src/components/Footer.jsx\");\n\n\n\n\n\n\n\n\nvar Dashboard = function Dashboard() {\n  var categories = ['Horror', 'Action', 'Survival', 'Puzzle', 'FPS', 'RPG', 'Casual', 'Strategy'];\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"flex-column\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Header__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Hero__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    gameTitle: \"Modern Warfare II\",\n    price: \"$70\",\n    btnAction: \"Add To Cart\"\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"main-content\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"category-tabs\"\n  }, categories.map(function (category, index) {\n    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n      key: index\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_CategoryTabs__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n      category: category\n    }));\n  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_GamesGrid__WEBPACK_IMPORTED_MODULE_4__[\"default\"], {\n    gameList: _data_games__WEBPACK_IMPORTED_MODULE_5__[\"default\"],\n    images: _static_images_index__WEBPACK_IMPORTED_MODULE_6__[\"default\"]\n  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_7__[\"default\"], null));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Dashboard);\n\n//# sourceURL=webpack://suckygames/./src/views/Dashboard.jsx?");
 
 /***/ }),
 
@@ -186,7 +246,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***********************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"* {\\r\\n    margin: 0 auto;\\r\\n    font-family: 'Rubik', sans-serif;\\r\\n}\\r\\n\\r\\nbody {\\r\\n    background: #180000;\\r\\n}\\r\\n\\r\\nh1,\\r\\nh3 {\\r\\n    margin: 0;\\r\\n    color: white;\\r\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://suckygames/./src/App.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"* {\\r\\n    margin: 0 auto;\\r\\n    font-family: 'Rubik', sans-serif;\\r\\n}\\r\\n\\r\\nbody {\\r\\n    background: #180000;\\r\\n}\\r\\n\\r\\nh1,\\r\\nh3,\\r\\nh4,\\r\\np,\\r\\na {\\r\\n    margin: 0;\\r\\n    color: white;\\r\\n}\\r\\n\\r\\ndiv {\\r\\n    margin: 0;\\r\\n    padding: 0;\\r\\n    border: 0;\\r\\n    vertical-align: baseline;\\r\\n}\\r\\n\\r\\nbutton {\\r\\n    cursor: pointer;\\r\\n}\\r\\n\\r\\na {\\r\\n    text-decoration: none;\\r\\n}\\r\\n\\r\\n/* YL */\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://suckygames/./src/App.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -196,7 +256,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \****************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \".header {\\r\\n    background: rgba(162, 0, 0, 0.44);\\r\\n    border-radius: .5rem;\\r\\n    display: flex;\\r\\n    justify-content: space-between;\\r\\n    align-items: center;\\r\\n    position: sticky;\\r\\n\\r\\n    margin: 1em .5em;\\r\\n    padding: 1em;\\r\\n    min-height: 50px;\\r\\n}\\r\\n\\r\\n.title {\\r\\n    margin: 0;\\r\\n}\\r\\n\\r\\n.hero {\\r\\n    position: absolute;\\r\\n    left: 0;\\r\\n    top: 0;\\r\\n    width: 100%;\\r\\n    height: 30%;\\r\\n    background: red;\\r\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://suckygames/./src/static/css/dashboard.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/getUrl.js */ \"./node_modules/css-loader/dist/runtime/getUrl.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);\n// Imports\n\n\n\nvar ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../images/mw2.jpg */ \"./src/static/images/mw2.jpg\"), __webpack_require__.b);\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\nvar ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \":root {\\r\\n    --hero-height: 600px;\\r\\n    --max-width: 2600px;\\r\\n    --size-200: 16px;\\r\\n}\\r\\n\\r\\n.flex-column {\\r\\n    display: flex;\\r\\n    flex-direction: column;\\r\\n    align-items: center;\\r\\n}\\r\\n.main-content {\\r\\n    width: 75%;\\r\\n    max-width: var(--max-width);\\r\\n}\\r\\n/* Start of header css */\\r\\n\\r\\n.sg-games-header {\\r\\n    width: 100%;\\r\\n    max-width: var(--max-width);\\r\\n    position: fixed;\\r\\n    display: block;\\r\\n    top: 0;\\r\\n    left: 50%;\\r\\n    transform: translate(-50%);\\r\\n    z-index: 1;\\r\\n    box-sizing: border-box;\\r\\n}\\r\\n\\r\\n.header {\\r\\n    background: rgba(162, 0, 0, 0.44);\\r\\n    border-radius: .5rem;\\r\\n    display: flex;\\r\\n    justify-content: space-between;\\r\\n    align-items: center;\\r\\n    position: absolute;\\r\\n    top: var(--size-200);\\r\\n    left: var(--size-200);\\r\\n    right: var(--size-200);\\r\\n    padding: 1em;\\r\\n    min-height: 30px;\\r\\n    box-sizing: border-box;\\r\\n}\\r\\n/* End of header css */\\r\\n\\r\\n/* Start of hero css */\\r\\n\\r\\n.hero {\\r\\n    position: relative;\\r\\n    display: block;\\r\\n    width: 100%;\\r\\n    transform: translate(-50%);\\r\\n    left: 50%;\\r\\n}\\r\\n\\r\\n.hero-image {\\r\\n    \\r\\n    height: var(--hero-height);\\r\\n    background: url(\" + ___CSS_LOADER_URL_REPLACEMENT_0___ + \");\\r\\n    background-repeat: no-repeat;\\r\\n    background-position-y: -6em;\\r\\n    background-size: auto;\\r\\n}\\r\\n\\r\\n.hero-info {\\r\\n    background: linear-gradient(70.55deg, #180000 46.24%, rgba(24, 0, 0, 0) 75.46%);\\r\\n    height: calc(600px - 4em - 30px);\\r\\n    width: 30vw;\\r\\n    padding: calc(4em + 30px) 0 0 5vw;\\r\\n}\\r\\n\\r\\n.hero-info h1 {\\r\\n    font-weight: lighter;\\r\\n    font-size: 3rem;\\r\\n}\\r\\n\\r\\n.hero-info button {\\r\\n    margin-top: calc(400px - 4em - 30px);\\r\\n    background-color: #FF6D6D;\\r\\n    font-size: large;\\r\\n    border-radius: .4rem;\\r\\n    border: 1px solid #FF6D6D;\\r\\n}\\r\\n\\r\\n/* End of hero css */\\r\\n\\r\\n/* Start of category tabs css */\\r\\n\\r\\n.category-tabs {\\r\\n    margin-top: 2em;\\r\\n    display: flex;\\r\\n    justify-content: space-between;\\r\\n}\\r\\n\\r\\n.category-btn {\\r\\n    background-color: #FF6D6D;\\r\\n    font-size: large;\\r\\n    border-radius: .4rem;\\r\\n    border: 1px solid #FF6D6D;\\r\\n}\\r\\n/* End of category tabs css */\\r\\n\\r\\n/* Start of games grid css */\\r\\n\\r\\n.game-grid {\\r\\n    display: grid;\\r\\n    grid-template-columns: auto auto auto auto auto;\\r\\n    row-gap: 50px;\\r\\n    margin-top: 2em;\\r\\n}\\r\\n.game-item {\\r\\n    border-radius: .5rem;\\r\\n    width: 227px;\\r\\n    height: 350px;\\r\\n}\\r\\n.game-item img {\\r\\n    width: inherit;\\r\\n    height: inherit;\\r\\n    border-radius: .5rem;\\r\\n}\\r\\ndiv.game-item {\\r\\n    margin: 0 auto  !important;\\r\\n    overflow: hidden;\\r\\n}\\r\\n\\r\\n.game-info {\\r\\n    position: relative;\\r\\n    top: -60px;\\r\\n    transition: top .3s;\\r\\n\\r\\n    height: 150px;\\r\\n    padding: 5px 0 0 10px;\\r\\n    background: rgba(0, 0, 0, 0.79);\\r\\n}\\r\\n\\r\\n.game-info:hover {\\r\\n    top: -150px;\\r\\n}\\r\\n\\r\\n.game-info button {\\r\\n    position: relative;\\r\\n    top: 50px;\\r\\n    background-color: #FF6D6D;\\r\\n    font-size: large;\\r\\n    border-radius: .4rem;\\r\\n    border: 1px solid #FF6D6D;\\r\\n}\\r\\n\\r\\n/* End of game grid css */\\r\\n\\r\\n/* Start of Footer css */\\r\\n\\r\\n.footer {\\r\\n    position: relative;\\r\\n    top: 20vh;\\r\\n    display: grid;\\r\\n    grid-template-columns: auto;\\r\\n    text-align: center;\\r\\n    background-color: #000000;\\r\\n\\r\\n    padding-top: 20px;\\r\\n    width: 100%;\\r\\n    height: 40vh;\\r\\n}\\r\\n\\r\\n/* End of Footer css */\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://suckygames/./src/static/css/dashboard.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -280,6 +340,96 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/static/images/CallistoProtocol.jpg":
+/*!************************************************!*\
+  !*** ./src/static/images/CallistoProtocol.jpg ***!
+  \************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"1060a18d788cd9fcb520.jpg\";\n\n//# sourceURL=webpack://suckygames/./src/static/images/CallistoProtocol.jpg?");
+
+/***/ }),
+
+/***/ "./src/static/images/DeadSpace.jpg":
+/*!*****************************************!*\
+  !*** ./src/static/images/DeadSpace.jpg ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"8a12ad842f386d8c7e72.jpg\";\n\n//# sourceURL=webpack://suckygames/./src/static/images/DeadSpace.jpg?");
+
+/***/ }),
+
+/***/ "./src/static/images/FlightSimulator.jpg":
+/*!***********************************************!*\
+  !*** ./src/static/images/FlightSimulator.jpg ***!
+  \***********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"3ef2fa9cb64ccf7612ab.jpg\";\n\n//# sourceURL=webpack://suckygames/./src/static/images/FlightSimulator.jpg?");
+
+/***/ }),
+
+/***/ "./src/static/images/Fortnite.jpg":
+/*!****************************************!*\
+  !*** ./src/static/images/Fortnite.jpg ***!
+  \****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"a94033b63d98d0768477.jpg\";\n\n//# sourceURL=webpack://suckygames/./src/static/images/Fortnite.jpg?");
+
+/***/ }),
+
+/***/ "./src/static/images/HotWheels.jpg":
+/*!*****************************************!*\
+  !*** ./src/static/images/HotWheels.jpg ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"9ff586c84444b9349192.jpg\";\n\n//# sourceURL=webpack://suckygames/./src/static/images/HotWheels.jpg?");
+
+/***/ }),
+
+/***/ "./src/static/images/Minecraft.jpg":
+/*!*****************************************!*\
+  !*** ./src/static/images/Minecraft.jpg ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"14612ca0327213f2739f.jpg\";\n\n//# sourceURL=webpack://suckygames/./src/static/images/Minecraft.jpg?");
+
+/***/ }),
+
+/***/ "./src/static/images/ModernWarfareII.jpg":
+/*!***********************************************!*\
+  !*** ./src/static/images/ModernWarfareII.jpg ***!
+  \***********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"8cb7ad586b35a31a3dcd.jpg\";\n\n//# sourceURL=webpack://suckygames/./src/static/images/ModernWarfareII.jpg?");
+
+/***/ }),
+
+/***/ "./src/static/images/Overwatch2.jpg":
+/*!******************************************!*\
+  !*** ./src/static/images/Overwatch2.jpg ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"78a0d9e256e045bb403b.jpg\";\n\n//# sourceURL=webpack://suckygames/./src/static/images/Overwatch2.jpg?");
+
+/***/ }),
+
+/***/ "./src/static/images/ResidentEvil8.jpg":
+/*!*********************************************!*\
+  !*** ./src/static/images/ResidentEvil8.jpg ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"1e86925a91225e9f14df.jpg\";\n\n//# sourceURL=webpack://suckygames/./src/static/images/ResidentEvil8.jpg?");
+
+/***/ }),
+
 /***/ "./src/static/images/mw2.jpg":
 /*!***********************************!*\
   !*** ./src/static/images/mw2.jpg ***!
@@ -318,6 +468,9 @@ eval("module.exports = __webpack_require__.p + \"272701e15efaaad73a6d.jpg\";\n\n
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
@@ -399,6 +552,32 @@ eval("module.exports = __webpack_require__.p + \"272701e15efaaad73a6d.jpg\";\n\n
 /******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
 /******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
 /******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"main": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
