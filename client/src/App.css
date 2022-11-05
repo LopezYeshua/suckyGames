@@ -32,4 +32,12 @@ a {
     text-decoration: none;
 }
 
+button[type=submit] {
+    background-color: #FF6D6D;
+    font-size: large;
+    border-radius: .4rem;
+    border: 0;
+    padding: .1em .5em;
+}
+
 /* YL */

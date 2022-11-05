@@ -20,7 +20,7 @@ const Logout = () => {
     }
 
     return (
-        <button onClick={logout}>Logout</button>
+        <button className="clr-btn" onClick={logout}>Logout</button>
     )
 }
 export default Logout

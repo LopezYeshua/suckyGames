@@ -1,0 +1,94 @@
+/* Start of login and reg css */
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    height: 100vh;
+    width: 100%;
+    background: #0000005b;
+    display: block;
+    position: fixed;
+    z-index: -1;
+}
+
+.container > h2 {
+    margin: -30px -20px -10px;
+    padding: 20px 0 0 10px;
+    height: 40px;
+    border-radius: 1rem 1rem 0 0;
+    background-color: red;
+}
+
+.container {
+    width: 1000px;
+    min-height: 400px;
+    position: relative;
+    top: 90px;
+    left: 50%;
+    transform: translate(-50%);
+    background: black;
+
+    padding: 30px 20px;
+    border-radius: 1rem;
+}
+
+.errmsg {
+    background-color: lightpink;
+    color: firebrick;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.offscreen {
+    background: white;
+    position: absolute !important;
+    left: -9999px !important;
+}
+
+.instructions {
+    font-size: 0.75rem;
+    border-radius: 0.5rem;
+    background: #000;
+    color: #fff;
+    padding: 0.25rem;
+    position: relative;
+    bottom: -10px;
+}
+
+form {
+    margin: 20px 0;
+}
+input[type=text] {
+    background-color: #00000000;
+    border-radius: .5rem;
+    font-size: 20px;
+    color: white;
+}
+input[type=password] {
+    background-color: #00000000;
+    border-radius: .5rem;
+    font-size: 20px;
+    color: white;
+}
+
+.input-gap {
+    margin-bottom: 30px;
+}
+
+.container > div {
+    display: flex;
+    justify-content: space-around;
+    min-height: 300px;
+    margin: 20px 0;
+}
+
+.container > div > div {
+    min-width: 200px;
+    height: 100%;
+    padding: 10px;
+}
+
+/* End of login and reg css */

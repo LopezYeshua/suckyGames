@@ -50,7 +50,7 @@ const Registration = () => {
                     </label>
                     <input 
                         type="text" 
-                        placeholder="Username"
+                        autoComplete="off"
                         value={user.username}
                         onChange={updateUserDataHandler("username")}
                         name="username" 
@@ -63,7 +63,6 @@ const Registration = () => {
                     </label>
                     <input 
                         type="text" 
-                        placeholder="email"
                         value={user.email}
                         onChange={updateUserDataHandler("email")}
                         name="email" 
@@ -76,7 +75,6 @@ const Registration = () => {
                     </label>
                     <input 
                         type="password" 
-                        placeholder="password"
                         value={user.password}
                         onChange={updateUserDataHandler("password")}
                         name="password" 
@@ -89,7 +87,6 @@ const Registration = () => {
                     </label>
                     <input 
                         type="password" 
-                        placeholder="confirmPassword"
                         value={user.confirmPassowd}
                         onChange={updateUserDataHandler("confirmPassword")}
                         name="confirmPassword" 

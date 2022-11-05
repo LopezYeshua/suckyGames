@@ -4,7 +4,7 @@ const CategoryTabs = ({category}) => {
 
     return (
         <>
-            <button className="category-btn">{category}</button>
+            <button type="submit">{category}</button>
         </>
     )
 }

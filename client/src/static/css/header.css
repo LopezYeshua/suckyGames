@@ -1,0 +1,56 @@
+/* Start of header css */
+
+.sg-games-header {
+    width: 100vw !important;
+    max-width: var(--max-width);
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.header {
+    background: rgba(162, 0, 0, 0.44);
+    border-radius: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: var(--size-200);
+    left: var(--size-200);
+    right: var(--size-200);
+    padding: 1em;
+    min-height: 30px;
+    box-sizing: border-box;
+}
+
+.active-header {
+    background: rgba(162, 0, 0, 1);
+    border-radius: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: var(--size-200);
+    left: var(--size-200);
+    right: var(--size-200);
+    padding: 1em;
+    min-height: 30px;
+    box-sizing: border-box;
+}
+
+.clr-btn {
+    margin: 0;
+
+    border: 0;
+    font-size: large;
+    color: white;
+    font-weight: bold;
+    background-color: #00000000;
+    cursor: pointer;
+}
+
+/* End of header css */

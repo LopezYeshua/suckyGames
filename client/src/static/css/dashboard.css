@@ -14,128 +14,6 @@
     max-width: var(--max-width);
 }
 
-/* Start of header css */
-
-.sg-games-header {
-    width: 100vw !important;
-    max-width: var(--max-width);
-    position: fixed;
-    display: block;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%);
-    z-index: 1;
-    box-sizing: border-box;
-}
-
-.header {
-    background: rgba(162, 0, 0, 0.44);
-    border-radius: .5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    top: var(--size-200);
-    left: var(--size-200);
-    right: var(--size-200);
-    padding: 1em;
-    min-height: 30px;
-    box-sizing: border-box;
-}
-
-.login-btn {
-    margin: 0;
-
-    border: 0;
-    font-size: large;
-    color: white;
-    font-weight: bold;
-    background-color: #00000000;
-    cursor: pointer;
-}
-
-/* End of header css */
-
-/* Start of login and reg css */
-
-.hidden {
-    display: none;
-}
-
-.visible {
-    height: 100vh;
-    width: 100%;
-    background: #0000005b;
-    display: block;
-    position: fixed;
-    z-index: 1;
-}
-
-.container > h2 {
-    margin: -30px -20px -10px;
-    padding: 20px 0 0 10px;
-    height: 40px;
-    border-radius: 1rem 1rem 0 0;
-    background-color: red;
-}
-
-.container {
-    width: 1000px;
-    min-height: 400px;
-    position: relative;
-    top: 90px;
-    left: 50%;
-    transform: translate(-50%);
-    background: black;
-
-    padding: 30px 20px;
-    border-radius: 1rem;
-}
-
-form {
-    margin: 20px 0;
-}
-input[type=text] {
-    background-color: #00000000;
-    border-radius: .5rem;
-    font-size: 20px;
-    color: white;
-}
-input[type=password] {
-    background-color: #00000000;
-    border-radius: .5rem;
-    font-size: 20px;
-    color: white;
-}
-button[type=submit] {
-    background-color: #FF6D6D;
-    border-radius: .5rem;
-    color: black;
-    border: 2px solid black;
-    font-size: 20px;
-    padding: .5em .25em;
-    cursor: pointer;
-}
-
-.input-gap {
-    margin-bottom: 30px;
-}
-
-.container > div {
-    display: flex;
-    justify-content: space-around;
-    min-height: 300px;
-    margin: 20px 0;
-}
-
-.container > div > div {
-    min-width: 200px;
-    height: 100%;
-    padding: 10px;
-}
-
-/* End of login and reg css */
-
 /* Start of hero css */
 
 .hero {
@@ -144,6 +22,7 @@ button[type=submit] {
     width: 100%;
     transform: translate(-50%);
     left: 50%;
+    z-index: 0;
 }
 
 .hero-image {
@@ -185,12 +64,6 @@ button[type=submit] {
     justify-content: space-between;
 }
 
-.category-btn {
-    background-color: #FF6D6D;
-    font-size: large;
-    border-radius: .4rem;
-    border: 1px solid #FF6D6D;
-}
 /* End of category tabs css */
 
 /* Start of games grid css */

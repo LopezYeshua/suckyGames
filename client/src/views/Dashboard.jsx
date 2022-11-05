@@ -7,7 +7,6 @@ import games from '../data/games'
 import images from '../static/images/index'
 import Footer from '../components/Footer'
 import "../static/css/dashboard.css"
-import LoginAndReg from '../components/LoginAndRegistration/LoginAndReg'
 import axios from 'axios'
 
 const Dashboard = () => {
@@ -17,7 +16,6 @@ const Dashboard = () => {
 
     return (
         <>
-            <LoginAndReg active={active} />
             <div className="flex-column">
                 <Header active={active} setActive={setActive} />
                 <Hero gameTitle={heroGame} price={"$70"} btnAction={"Add To Cart"} />

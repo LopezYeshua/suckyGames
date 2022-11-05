@@ -6,7 +6,7 @@ const initialState = {
     password: ""
 }
 
-const Login = () => {
+const Login = ({setActive}) => {
     const [user, setUser] = useState(initialState)
     const { setLoggedInInfo } = useContext(LoggedInContext)
 
@@ -26,6 +26,7 @@ const Login = () => {
                         loggedInInfo: res.data.user._id,
                         loggedInUsername: res.data.user.username
                     })
+                    setActive(current => !current)
                 })
                 .catch(err => console.log(err))
         }
