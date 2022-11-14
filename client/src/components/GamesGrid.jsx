@@ -15,7 +15,7 @@ const GamesGrid = ({gameList, images}) => {
                                 "Free" :
                                 `$${game.price}`}
                             </h4>
-                            <button>Add to Cart</button>
+                            <button type="submit">Add to Cart</button>
                         </div>
                     </div>
                 )

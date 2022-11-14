@@ -1,3 +1,8 @@
+:root {
+    --size-200: 16px;
+    --max-width: 2600px;
+}
+
 /* Start of header css */
 
 .sg-games-header {
@@ -13,7 +18,7 @@
 }
 
 .header {
-    background: rgba(162, 0, 0, 0.44);
+    background: rgba(162, 0, 0, 0.50);
     border-radius: .5rem;
     display: flex;
     justify-content: space-between;
@@ -22,8 +27,8 @@
     top: var(--size-200);
     left: var(--size-200);
     right: var(--size-200);
-    padding: 1em;
-    min-height: 30px;
+    padding: 1em 2em;
+    height: 60px;
     box-sizing: border-box;
 }
 
@@ -37,9 +42,17 @@
     top: var(--size-200);
     left: var(--size-200);
     right: var(--size-200);
-    padding: 1em;
+    padding: 1em 2em;
     min-height: 30px;
     box-sizing: border-box;
+}
+
+nav > div {
+    display: flex;
+}
+
+nav > div > *:not(:last-child) {
+    margin-right: 100px;
 }
 
 .clr-btn {
@@ -54,3 +67,39 @@
 }
 
 /* End of header css */
+
+/* Start of cart css */
+
+@keyframes active-cart {
+    from {height: 0px; display: none}
+    to {height: 350px;}
+}
+
+.active-cart-tab {
+    position: absolute;
+    top: 60px;
+    right: -30px;
+    animation-name: active-cart;
+    animation-duration: .5s;
+    border-radius: 0 0 .5rem .5rem;
+    height: 350px;
+    width: 300px;
+    background: rgba(162, 0, 0, 0.50);
+}
+
+.hidden-cart-tab {
+    display: none;
+}
+
+.cart-game-preview {
+    padding: 15px 10px;
+    border-bottom: 2px solid black;
+}
+
+.cart-game-preview > img {
+    border-radius: .2rem;
+    width: 74px !important;
+    height: 100px;
+}
+
+/* End of cart css */

@@ -6,7 +6,7 @@ const Hero = ({gameTitle, price, btnAction}) => {
                 <div className="hero-info">
                     <h1>{gameTitle}</h1>
                     <h3>{price}</h3>
-                    <button>{btnAction}</button>
+                    <button type="submit">{btnAction}</button>
                 </div>
             </div>
         </div>

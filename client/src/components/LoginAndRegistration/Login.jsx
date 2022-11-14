@@ -26,6 +26,7 @@ const Login = ({setActive}) => {
                         loggedInInfo: res.data.user._id,
                         loggedInUsername: res.data.user.username
                     })
+                    console.log(res)
                     setActive(current => !current)
                 })
                 .catch(err => console.log(err))

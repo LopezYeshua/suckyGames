@@ -29,7 +29,7 @@ module.exports.login = async (req, res) => {
         .cookie("usertoken", userToken, process.env.SECRET_KEY, {
             httpOnly: true
         })
-        .json({msg: "success!", user: user})
+        .json({msg: "success!", user: user, userToken: userToken})
 }
 
 module.exports.register =  async (req, res) => {
@@ -37,7 +37,9 @@ module.exports.register =  async (req, res) => {
         .then(user => {
             const userToken = jwt.sign({
                 id: user._id
-            }, process.env.SECRET_KEY)
+            }, 
+            process.env.SECRET_KEY,
+            { expiresIn: 300 })
 
             res
                 .cookie("usertoken", userToken, process.env.SECRET_KEY, {

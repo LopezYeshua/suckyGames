@@ -1,5 +1,6 @@
 * {
-    margin: 0 auto;
+    padding: 0;
+    margin: 0;
     font-family: 'Rubik', sans-serif;
 }
 
@@ -39,5 +40,3 @@ button[type=submit] {
     border: 0;
     padding: .1em .5em;
 }
-
-/* YL */

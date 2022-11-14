@@ -13,6 +13,7 @@ const App = () => {
 
     const cookies = new Cookies()
     const token = cookies.get('usertoken')
+    console.log(token)
     if (token) {
         if (jwt(token).id) {
             tempLoggedIn = true;

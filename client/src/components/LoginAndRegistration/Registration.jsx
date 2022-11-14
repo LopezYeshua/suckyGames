@@ -24,7 +24,7 @@ const Registration = () => {
     const handleForm = useCallback(
         () => (e) => {
             e.preventDefault()
-            axios.post('http://localhost:8000/api/register', user)
+            axios.post('http://localhost:8000/api/register', user )
                 .then(res => {
                     console.log(res)
                     setLoggedInInfo({
